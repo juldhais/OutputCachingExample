@@ -3,8 +3,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOutputCache(opt =>
 {
     opt.DefaultExpirationTimeSpan = TimeSpan.FromSeconds(30);
-    opt.AddPolicy("products", builder => builder.Expire(TimeSpan.FromSeconds(10)));
-    opt.AddPolicy("reports", builder => builder.Expire(TimeSpan.FromSeconds(60)));
+    opt.AddPolicy("MasterData", builder => builder.Expire(TimeSpan.FromSeconds(10)));
+    opt.AddPolicy("Reports", builder => builder.Expire(TimeSpan.FromSeconds(60)));
 });
 
 builder.Services.AddControllers();

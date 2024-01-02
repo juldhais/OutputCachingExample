@@ -8,7 +8,7 @@ namespace OutputCachingExample.Controllers
     public class ProductController : ControllerBase
     {
         [HttpGet]
-        [OutputCache(PolicyName = "products")]
+        [OutputCache(PolicyName = "MasterData")]
         public async Task<IActionResult> Get(CancellationToken ct)
         {
             await Task.Delay(5000, ct);

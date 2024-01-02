@@ -8,7 +8,7 @@ namespace OutputCachingExample.Controllers
     public class ReportController : ControllerBase
     {
         [HttpGet]
-        [OutputCache(PolicyName = "reports")]
+        [OutputCache(PolicyName = "Reports")]
         public async Task<IActionResult> Get(int year, int month, CancellationToken ct)
         {
             await Task.Delay(5000, ct);
